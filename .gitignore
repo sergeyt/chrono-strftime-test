@@ -1,0 +1,10 @@
+node_modules
+/dist
+/target
+/pkg
+.idea
+
+*.wasm
+*.wasm.map
+*.asm.js
+*.log

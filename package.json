@@ -1,0 +1,34 @@
+{
+  "name": "chrono-strftime-test",
+  "version": "0.1.0",
+  "author": "Sergey Todyshev <stodyshev@gmail.com>",
+  "scripts": {
+    "build": "npm run clean && webpack",
+    "build-node": "TARGET=node PROFILE=release npm run build",
+    "clean": "rimraf dist pkg",
+    "spec": "npm run build-node && jest spec",
+    "start": "npm run clean && webpack-dev-server --open -d",
+    "test": "cargo test && wasm-pack test --node"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/runtime": "^7.9.2",
+    "@types/jest": "^25.2.1",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.11.1",
+    "@wasm-tool/wasm-pack-plugin": "^1.2.0",
+    "babel-jest": "^25.3.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "jest": "^25.3.0",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3",
+    "wasm-pack": "^0.9.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "yargs": "^15.3.1"
+  }
+}
